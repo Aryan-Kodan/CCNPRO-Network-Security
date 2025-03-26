@@ -1,0 +1,41 @@
+2025-03-26 17:40:00 | Action: unknown | Target: unknown | Number: None | Result: Unknown command
+2025-03-26 17:40:07 | Action: block | Target: port | Number: 22 | Result: (Simulation) Port 22 would be blocked.
+2025-03-26 17:40:16 | Action: block | Target: port | Number: 22 | Result: Command cancelled by user.
+2025-03-26 17:41:06 | Action: show | Target: alerts | Number: None | Result: (Simulation) Displaying last 10 security alerts.
+2025-03-26 17:43:07 | Action: show | Target: unknown | Number: None | Result: Unknown command
+2025-03-26 17:48:46 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) IP 192.168.1.100 would be blocked.
+2025-03-26 18:16:45 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 18:18:15 | Action: unblock | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be unblocked.
+2025-03-26 18:21:06 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 18:21:39 | Action: unblock | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be unblocked.
+2025-03-26 18:22:21 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 18:22:43 | Action: unblock | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be unblocked.
+2025-03-26 18:28:40 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 18:29:07 | Action: unblock | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be unblocked.
+2025-03-26 18:29:53 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 18:30:14 | Action: block | Target: ip | Number: 162.145.56.128 | Result: (Simulation) ip 162.145.56.128 would be blocked.
+2025-03-26 18:38:38 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 18:38:45 | Action: block | Target: port | Number: 22 | Result: (Simulation) port 22 would be blocked.
+2025-03-26 18:40:49 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 18:41:21 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 18:41:27 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 18:41:48 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 18:42:42 | Action: block | Target: port | Number: 22 | Result: (Simulation) port 22 would be blocked.
+2025-03-26 18:42:54 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 18:43:01 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 18:43:11 | Action: block | Target: port | Number: 22 | Result: (Simulation) port 22 would be blocked.
+2025-03-26 18:46:38 | Action: unblock | Target: ip | Number: 192.168.2.200 | Result: (Simulation) ip 192.168.2.200 would be unblocked.
+2025-03-26 18:57:03 | Action: block | Target: port | Number: 13 | Result: (Simulation) port 13 would be blocked.
+2025-03-26 18:59:58 | Action: unblock | Target: port | Number: 13 | Result: (Simulation) port 13 would be unblocked.
+2025-03-26 20:01:24 | Action: block | Target: ip | Number: 130.1.1.1 | Result: (Simulation) ip 130.1.1.1 would be blocked.
+2025-03-26 20:01:55 | Action: block | Target: ip | Number: 130.1.1.1 | Result: (Simulation) ip 130.1.1.1 would be blocked.
+2025-03-26 20:02:11 | Action: unblock | Target: ip | Number: 130.1.1.1 | Result: (Simulation) ip 130.1.1.1 would be unblocked.
+2025-03-26 22:22:33 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-26 22:23:25 | Action: unblock | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be unblocked.
+2025-03-27 00:39:27 | Action: block | Target: ip | Number: 192.168.25.25 | Result: (Simulation) ip 192.168.25.25 would be blocked.
+2025-03-27 00:50:34 | Action: block | Target: ip | Number: 172.17.50.27 | Result: (Simulation) ip 172.17.50.27 would be blocked.
+2025-03-27 00:56:15 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
+2025-03-27 00:56:15 | Action: block | Target: ip | Number: 192.168.1.101 | Result: (Simulation) ip 192.168.1.101 would be blocked.
+2025-03-27 00:56:20 | Action: block | Target: ip | Number: 192.168.2.101 | Result: (Simulation) ip 192.168.2.101 would be blocked.
+2025-03-27 00:56:53 | Action: unblock | Target: ip | Number: 192.168.25.25 | Result: (Simulation) ip 192.168.25.25 would be unblocked.
+2025-03-27 01:04:34 | Action: block | Target: ip | Number: 192.168.1.100 | Result: (Simulation) ip 192.168.1.100 would be blocked.
