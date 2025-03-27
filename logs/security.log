@@ -210,3 +210,15 @@
 2025-03-27 18:24:08,089 - INFO - 127.0.0.1 - - [27/Mar/2025 18:24:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
 2025-03-27 18:27:32,850 - INFO - 127.0.0.1 - - [27/Mar/2025 18:27:32] "GET / HTTP/1.1" 200 -
 2025-03-27 18:27:32,883 - INFO - 127.0.0.1 - - [27/Mar/2025 18:27:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-27 18:40:41,935 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.53.229:5000
+2025-03-27 18:40:41,935 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 18:40:41,946 - INFO -  * Restarting with stat
+2025-03-27 18:40:42,157 - WARNING -  * Debugger is active!
+2025-03-27 18:40:42,159 - INFO -  * Debugger PIN: 132-035-539
+2025-03-27 18:40:44,858 - INFO - 127.0.0.1 - - [27/Mar/2025 18:40:44] "GET / HTTP/1.1" 200 -
+2025-03-27 18:40:44,926 - INFO - 127.0.0.1 - - [27/Mar/2025 18:40:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-03-27 18:40:48,597 - INFO - SYSTEM: Executing action: show_logs on unknown None
+2025-03-27 18:40:48,612 - INFO - 127.0.0.1 - - [27/Mar/2025 18:40:48] "POST /execute HTTP/1.1" 200 -
