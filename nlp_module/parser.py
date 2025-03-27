@@ -1,3 +1,5 @@
+# parser.py
+import re
 def parse_command(user_input):
     """
     Parses user input and extracts action, target, and number.
@@ -45,11 +47,23 @@ def parse_command(user_input):
 
             if target == "ip":
                 parsed_command["target"] = "ip"
-                parsed_command["number"] = number  # Example: 192.168.1.100
+                # Validate the IP format
+                if re.match(r"^(?:\d{1,3}\.){3}\d{1,3}$", number):
+                    parsed_command["number"] = number  # Example: 192.168.1.100
+                else:
+                    parsed_command["action"] = "invalid"
+                    parsed_command["target"] = "ip"
+                    parsed_command["number"] = number  # Invalid IP format
 
             elif target == "port":
-                parsed_command["target"] = "port"
-                parsed_command["number"] = number  # Example: 22
+                # Ensure that port is a valid number within range
+                if number.isdigit() and 1 <= int(number) <= 65535:
+                    parsed_command["target"] = "port"
+                    parsed_command["number"] = number  # Example: 22
+                else:
+                    parsed_command["action"] = "invalid"
+                    parsed_command["target"] = "port"
+                    parsed_command["number"] = number  # Invalid port number
 
             return parsed_command
 
