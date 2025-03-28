@@ -3,7 +3,7 @@ import sqlite3
 import secrets
 from flask_bcrypt import Bcrypt
 
-DB_PATH = "D:/CCNPRO/database/security.db"
+DB_PATH = "./database/security.db"
 bcrypt = Bcrypt()
 
 def init_db():

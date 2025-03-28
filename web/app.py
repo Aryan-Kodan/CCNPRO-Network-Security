@@ -1,13 +1,17 @@
 # app.py
+
 from flask import Flask, render_template, request, jsonify, redirect, url_for, session, abort
-from config import ALLOWED_IPS
+from datetime import timedelta
+from config import ALLOWED_IPS, SAFE_MODE
 from nlp_module.parser import parse_command
 from execution_module.executor import execute_command
+from execution_module.rollback_handler import perform_rollback
 from database.db_handler import init_db, validate_user
 from logger.custom_logger import log_event, get_recent_logs
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key_here"
+app.permanent_session_lifetime = timedelta(minutes=30)
 
 # Initialize database
 init_db()
@@ -30,7 +34,7 @@ def restrict_access():
 def index():
     """Homepage with login/logout options."""
     if "username" in session:
-        return render_template("dashboard.html", username=session["username"], role=session["role"])
+        return render_template("dashboard.html", username=session["username"], role=session["role"], safe_mode=SAFE_MODE)
     return redirect(url_for("login"))
 
 @app.route("/login", methods=["GET", "POST"])
@@ -44,6 +48,7 @@ def login():
         if role:
             session["username"] = username
             session["role"] = role
+            session.permanent = True
             log_event("info", f"User '{username}' logged in.")
             return redirect(url_for("index"))
 
@@ -73,7 +78,7 @@ def execute():
     if not user_command:
         return jsonify({"error": "No command provided"}), 400
 
-    # Permission check for "block" and "unblock" actions
+    # Permission check for block/unblock
     if role != "admin" and ("block" in user_command or "unblock" in user_command):
         log_event("warning", f"Unauthorized command attempt: {user_command}")
         return jsonify({"error": "Permission denied"}), 403
@@ -90,6 +95,24 @@ def execute():
 def logs():
     """Displays the last 10 logs."""
     return jsonify({"recent_logs": get_recent_logs()})
+
+@app.route("/toggle_safe_mode")
+def toggle_safe_mode():
+    """Admin can toggle Safe Mode ON/OFF."""
+    if "username" not in session or session["role"] != "admin":
+        return "Unauthorized", 403
+
+    import config
+    config.SAFE_MODE = not config.SAFE_MODE
+    log_event("system", f"Safe Mode {'enabled' if config.SAFE_MODE else 'disabled'} by {session['username']}")
+    return f"Safe Mode is now {'ON' if config.SAFE_MODE else 'OFF'}"
+
+@app.route("/rollback_failsafe", methods=["POST"])
+def rollback():
+    if "username" not in session or session["role"] != "admin":
+        abort(403)
+    result = perform_rollback()
+    return jsonify({"result": result})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)

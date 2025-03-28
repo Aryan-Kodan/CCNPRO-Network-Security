@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.db
+*.log
+*.sqlite3
+safe_mode.flag
+rollback_log.txt
+venv/
+.env
+.DS_Store
+Thumbs.db
